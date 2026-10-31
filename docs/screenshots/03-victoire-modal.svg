@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="modalBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e172a"/>
+      <stop offset="50%" stop-color="#14213d"/>
+      <stop offset="100%" stop-color="#0a1122"/>
+    </linearGradient>
+
+    <linearGradient id="goldBanner" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+
+    <filter id="winGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Dark Blurred Backdrop -->
+  <rect width="1200" height="675" fill="#030712" fill-opacity="0.94"/>
+
+  <!-- Confetti Explosion in Background -->
+  <g opacity="0.85">
+    <rect x="220" y="80" width="16" height="8" rx="2" fill="#facc15" transform="rotate(35 220 80)"/>
+    <rect x="340" y="140" width="12" height="12" rx="3" fill="#00f0ff" transform="rotate(-20 340 140)"/>
+    <circle cx="180" cy="220" r="7" fill="#ec4899"/>
+    <rect x="260" y="310" width="18" height="7" rx="2" fill="#10b981" transform="rotate(65 260 310)"/>
+    <polygon points="150,420 160,400 170,420" fill="#f43f5e"/>
+    <circle cx="210" cy="510" r="6" fill="#38bdf8"/>
+
+    <!-- Right Side Confetti -->
+    <rect x="980" y="90" width="14" height="10" rx="2" fill="#10b981" transform="rotate(-40 980 90)"/>
+    <rect x="910" y="180" width="18" height="6" rx="2" fill="#facc15" transform="rotate(25 910 180)"/>
+    <circle cx="1040" cy="260" r="8" fill="#a855f7"/>
+    <polygon points="950,360 962,340 974,360" fill="#00f0ff"/>
+    <rect x="1000" y="470" width="16" height="8" rx="2" fill="#f59e0b" transform="rotate(50 1000 470)"/>
+    <circle cx="920" cy="540" r="6" fill="#ef4444"/>
+  </g>
+
+  <!-- MAIN VICTORY MODAL WINDOW -->
+  <g transform="translate(330, 85)" filter="url(#cardShadow)">
+    <!-- Modal Window Body -->
+    <rect width="540" height="505" rx="24" fill="url(#modalBg)" stroke="#22d3ee" stroke-width="2"/>
+
+    <!-- Glowing Top Halo -->
+    <ellipse cx="270" cy="0" rx="160" ry="25" fill="#00f0ff" opacity="0.3" filter="url(#winGlow)"/>
+
+    <!-- Trophy / Crown Icon Badge -->
+    <g transform="translate(270, 48)">
+      <circle cx="0" cy="0" r="38" fill="#1e293b" stroke="#facc15" stroke-width="3" filter="url(#winGlow)"/>
+      <path d="M-18 -12 L18 -12 L14 12 L-14 12 Z" fill="#facc15"/>
+      <path d="M-18 -12 Q -28 -8 -22 6 Q -14 10 -14 10" fill="none" stroke="#facc15" stroke-width="2.5"/>
+      <path d="M18 -12 Q 28 -8 22 6 Q 14 10 14 10" fill="none" stroke="#facc15" stroke-width="2.5"/>
+      <rect x="-8" y="12" width="16" height="8" fill="#f59e0b"/>
+      <rect x="-14" y="20" width="28" height="5" rx="2" fill="#d97706"/>
+    </g>
+
+    <!-- Header Titles -->
+    <text x="270" y="118" font-family="system-ui, sans-serif" font-weight="900" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="1">
+      🎉 ON A UN GAGNANT ! 🎉
+    </text>
+    <text x="270" y="142" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">
+      Tirage certifié transparent • Horodatage officiel
+    </text>
+
+    <!-- BIG WINNER CARD -->
+    <g transform="translate(45, 160)">
+      <rect width="450" height="150" rx="16" fill="#09101f" stroke="#00f0ff" stroke-width="2" filter="url(#winGlow)"/>
+      
+      <!-- Golden Accent Strip -->
+      <rect x="0" y="0" width="450" height="6" rx="3" fill="url(#goldBanner)"/>
+
+      <text x="225" y="40" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="2">
+        LE GRAND RÉSULTAT DU TIRAGE
+      </text>
+
+      <!-- Winning Label -->
+      <text x="225" y="85" font-family="system-ui, sans-serif" font-weight="900" font-size="26" fill="#facc15" text-anchor="middle" filter="url(#winGlow)">
+        Orange Money 5 000 FCFA
+      </text>
+
+      <text x="225" y="118" font-family="system-ui, sans-serif" font-style="italic" font-size="13" fill="#34d399" text-anchor="middle">
+        « C'est ça qui est ça ! Félicitations au champion ! »
+      </text>
+
+      <text x="225" y="136" font-family="monospace" font-size="10" fill="#64748b" text-anchor="middle">
+        31/10/2026 à 11:42:08 • ID Tirage: #8BF9D870
+      </text>
+    </g>
+
+    <!-- Action Buttons Inside Modal -->
+    <g transform="translate(45, 332)">
+      <!-- Spin Again (Rejouer) -->
+      <rect x="0" y="0" width="215" height="48" rx="10" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="107" y="30" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">
+        🔄 Rejouer (Espace)
+      </text>
+
+      <!-- Copy Result -->
+      <rect x="235" y="0" width="215" height="48" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+      <text x="342" y="30" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#cbd5e1" text-anchor="middle">
+        📋 Copier le résultat
+      </text>
+
+      <!-- Eliminate Option Toggle Button -->
+      <rect x="0" y="62" width="450" height="42" rx="10" fill="#131d33" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="225" y="88" font-family="system-ui, sans-serif" font-weight="700" font-size="13" fill="#fb7185" text-anchor="middle">
+        🚫 Retirer « Orange Money 5 000 FCFA » de la liste
+      </text>
+
+      <!-- Close / Dismiss link -->
+      <text x="225" y="134" font-family="system-ui, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+        Appuyez sur Échap pour fermer
+      </text>
+    </g>
+  </g>
+</svg>

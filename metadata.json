@@ -1,0 +1,6 @@
+{
+  "name": "GO SPIN ELITE - 3D Decision Wheel",
+  "description": "High-performance 3D decision wheel and lucky draw app optimized for 3G networks and offline play with bilingual support, audio synthesis, and custom profiles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
